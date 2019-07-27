@@ -1,6 +1,6 @@
 # Fyreboard
 Info and files on my custom built keyboard
-
+![Fyreboard Rev2](https://github.com/fyrefawkes/fyreboard/blob/master/Resources/Rev2.jpg)
 ## Parts List
 
 * Hardware:
