@@ -23,20 +23,14 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT( /* Base, Osu mode */
-    TO(1),  KC_ESC,  KC_ENTER, \
+      KC_ESC, TO(1),  KC_ENTER, \
       KC_S,  KC_D, KC_F, KC_J, KC_K, KC_L, \
       KC_F2, KC_R, KC_SPACE, KC_SPACE, KC_DOT, KC_SLASH, \
       KC_LEFT, KC_RIGHT, KC_UP, KC_DOWN \
   ),
-  [1] = LAYOUT( /* Function */
-    TO(2), KC_HOME, KC_END, \
-      KC_F1, KC_F2, KC_F3, KC_F10, KC_F11, KC_F12, \
-      KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, \
-      KC_LEFT, KC_RIGHT, KC_UP, KC_DOWN \
-    ),
-  [2] = LAYOUT( /* KSM mode */
-    TO(0),  KC_ESC,  KC_ENTER, \
-      KC_NO,  KC_D, KC_F, KC_J, KC_K, KC_NO, \
+  [1] = LAYOUT( /* KSM/8k mode */
+      KC_ESC, TO(0), KC_ENTER, \
+      KC_S,  KC_D, KC_F, KC_J, KC_K, KC_L, \
       KC_LEFT, KC_RIGHT, KC_C, KC_N, KC_UP, KC_DOWN, \
       KC_Q, KC_W, KC_O, KC_P \
     )
@@ -68,8 +62,6 @@ void encoder_update_user(uint8_t index, bool clockwise) {
   uint8_t layer = biton32(layer_state);
   if (index == 0) { /* First encoder */
     if (clockwise) {
-      //register_code(keymap_key_to_keycode(layer, (keypos_t) {.row = 3, .col = 1}));
-      //unregister_code(keymap_key_to_keycode(layer, (keypos_t) {.row = 3, .col = 1}));
       tap_code(keymap_key_to_keycode(layer, (keypos_t) {.row = 3, .col = 1}));
     } else {
       tap_code(keymap_key_to_keycode(layer, (keypos_t) {.row = 3, .col = 0}));

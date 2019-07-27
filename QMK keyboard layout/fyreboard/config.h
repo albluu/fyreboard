@@ -41,8 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { B3, F5, F6, E6}
-#define MATRIX_COL_PINS { B1, F0, F1, F7, B2, F4 }
+#define MATRIX_ROW_PINS { F1, D0, C6, E6}
+#define MATRIX_COL_PINS { D3, B4, F5, F6, F4, F7 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
@@ -52,9 +52,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * Encoder for mouse movement
  */
 #define NUMBER_OF_ENCODERS 2
-#define ENCODERS_PAD_A { C6, D1 }
-#define ENCODERS_PAD_B { D0, D3 }
-#define ENCODER_RESOLUTION 3
+#define ENCODERS_PAD_A { B6, B2 }
+#define ENCODERS_PAD_B { B7, B3 }
+#define ENCODER_RESOLUTION 2
 
 /*
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
